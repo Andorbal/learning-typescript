@@ -17,7 +17,7 @@ gulp.task('default', ['buildrun']);
 // Run
 
 gulp.task('run', shell.task([
-    'node ./src/server.js'
+    'node ./out/server.js'
 ]));
 
 gulp.task('buildrun', function (cb) {
@@ -36,4 +36,8 @@ gulp.task('compile:typescript', function () {
             emitError: false
         }))
         .pipe(gulp.dest(paths.tscripts.dest));
+});
+
+gulp.task('watch', ['build'], function() {
+        return gulp.watch(paths.tscripts.src, ['build']);
 });
