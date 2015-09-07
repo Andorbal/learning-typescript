@@ -2,6 +2,7 @@ var gulp   = require('gulp');
 var tsc    = require('gulp-tsc');
 var shell  = require('gulp-shell');
 var runseq = require('run-sequence');
+var mocha = require('gulp-mocha');
 
 var paths = {
     tscripts : { 
@@ -40,4 +41,10 @@ gulp.task('compile:typescript', function () {
 
 gulp.task('watch', ['build'], function() {
         return gulp.watch(paths.tscripts.src, ['build']);
+});
+
+gulp.task('test', function () {
+    return gulp.src('out/test/**/*.js', {read: false})
+        // gulp-mocha needs filepaths so you can't have any plugins before it
+        .pipe(mocha({reporter: 'nyan'}));
 });
