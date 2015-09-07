@@ -4,7 +4,7 @@
 /**
  * Module dependencies.
  */
-import chai = require('chai');
+import * as chai from 'chai';
 import { Person } from '../../code/models/person'
 
 /**
