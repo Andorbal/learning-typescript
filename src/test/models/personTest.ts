@@ -4,14 +4,14 @@
 /**
  * Module dependencies.
  */
-import * as chai from 'chai';
+import { expect } from 'chai';
 import { Person } from '../../code/models/person'
 
 /**
  * Globals
  */
 
-var expect = chai.expect;
+//var expect = chai.expect;
 class TestOutput implements Output {
     lastWrite : string;
     
