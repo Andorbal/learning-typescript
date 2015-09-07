@@ -1,8 +1,8 @@
 
-import ConsoleOutput = require('./services/consoleOutput');
-import Person = require('./models/person');
+import { ConsoleOutput } from './services/consoleOutput';
+import { Person } from './models/person';
 
-var person = new Person.Person("John Doe", 23);
-var output = new ConsoleOutput.ConsoleOutput();
+var person = new Person("John Doe", 23);
+var output = new ConsoleOutput();
 
 person.talk(output, "Hello!");

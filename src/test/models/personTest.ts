@@ -11,7 +11,6 @@ import { Person } from '../../code/models/person'
  * Globals
  */
 
-//var expect = chai.expect;
 class TestOutput implements Output {
     lastWrite : string;
     
