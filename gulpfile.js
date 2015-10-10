@@ -2,7 +2,7 @@ var gulp   = require('gulp');
 var tsc    = require('gulp-tsc');
 var shell  = require('gulp-shell');
 var runseq = require('run-sequence');
-var mocha = require('gulp-mocha');
+var mocha  = require('gulp-mocha');
 
 var paths = {
     tscripts : { 
