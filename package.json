@@ -1,5 +1,5 @@
 {
-  "name": "typescript",
+  "name": "learning-typescript",
   "version": "1.0.0",
   "description": "Learning basics of Typescript",
   "main": "gulpfile.js",
@@ -7,7 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/code/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "tsd": "tsd"
   },
   "author": "",
   "license": "ISC",
@@ -19,5 +22,9 @@
     "gulp-tsc": "^0.9.1",
     "mocha": "^2.3.1",
     "run-sequence": "^0.3.6"
+  },
+  "dependencies": {
+    "tsd": "^0.6.5",
+    "typescript": "^1.6.2"
   }
 }
